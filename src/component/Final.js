@@ -7,6 +7,8 @@ import Chart from "react-google-charts";
 import { useParams } from "react-router-dom";
 
 function Final() {
+  const aux=[["Nombre", "Puntuacion"]];
+  const [top, setTop] = useState(aux);
 
   const params = useParams();
 
@@ -14,21 +16,40 @@ function Final() {
     firebase.ref("/sala/"+params._code+"/Ganadores")
   );
 
-  function top5(){
+  const history = useHistory();
 
-    
+
+  function regresar(){
+
+    history.push("/");
   }
+  
 
   useEffect(() => {
-    console.log(ganadores);
+  //  console.log(ganadores); 
       if (ganadores.length !== 0) {
+        var name;
+        var point;
+    
+        for (var i = 0; i <ganadores.length; i++) {
+          name=ganadores[i].nombre;
+          point=ganadores[i].puntuacion;
+          aux.push([name, point]); 
+       }
+       setTop(aux);
+       console.log(top);
+      }else{
         
       }
+
   }, [ganadores]);
 
   return (
     <React.Fragment>
       <br/>
+      <h1>
+            Resultados
+          </h1>
       <br/>
     <div className="card shadow-lg bg-white rounded fullCard">
       <div className="card-body">
@@ -38,12 +59,7 @@ function Final() {
           height={"300px"}
           chartType="Bar"
           loader={<div>Cargando</div>}
-          data={[
-            [" ", " "],
-            ["2do", 1000],
-            ["1er", 1170],
-            ["3er", 1030],
-          ]}
+          data={top}
             
           options={{
             // Material design options
@@ -54,10 +70,20 @@ function Final() {
           // For tests
           rootProps={{ "data-testid": "2" }}
         />
-      </div>
+            <br/>
+            <br/>
+
+    <button className="w-25 btn btn-lg btn-blue" type="submit" onClick={regresar}>
+              Jugar otra partida
+            </button>
+            <br/>
+            <br/>
+
+            </div>
     </div>
     </React.Fragment>
   );
 }
 
 export default Final;
+
