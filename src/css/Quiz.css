@@ -1,0 +1,13 @@
+h1{
+    color:aliceblue;
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.grid{
+    margin-top:8em;
+    margin-bottom: 10em;
+
+}

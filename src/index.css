@@ -5,9 +5,44 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background: rgb(1,138,190);
+  background: linear-gradient(90deg, rgb(98, 186, 221) 0%, rgba(151,202,219,1) 100%);
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+.btn-blue{
+  background: rgb(21, 181, 209);
+}
+
+.btn-purple{
+  background: rgb(140, 53, 197);
+  margin: 0.5em;
+  padding: 1.5em;
+
+}
+
+.btn-pink{
+  background: rgb(231, 28, 72);
+  margin: 0.5em;
+  padding: 1.5em;
+
+}
+
+.btn-orange{
+  background: rgb(230, 141, 9);
+  margin: 0.5em;
+  padding: 1.5em;
+}
+
+.btn-green{
+  background: rgba(17,185,20,1);
+  margin: 0.5em;
+  padding: 1.5em;
 }
