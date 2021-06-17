@@ -78,6 +78,8 @@ function Quiz() {
               <div className="col">
               <button className="w-100 btn btn-lg btn-green shadow" onClick={checaRespuesta(0)}>{preguntaAct.opciones[0]}</button>
               <button className="w-100 btn btn-lg btn-purple shadow" onClick={checaRespuesta(1)}>{preguntaAct.opciones[1]}</button>
+              </div>
+              <div className="col">
               <button className="w-100 btn btn-lg btn-pink shadow" onClick={checaRespuesta(2)}>{preguntaAct.opciones[2]}</button>
               <button className="w-100 btn btn-lg btn-orange shadow" onClick={checaRespuesta(3)}>{preguntaAct.opciones[3]}</button>
               </div>
