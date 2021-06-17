@@ -9,23 +9,10 @@ td {
     padding: 5px;
 }
 
-#podium0, #podium1, #podium2 {
-    width: 110px;
-}
-#podium0 { /* gold */
-    height: 250px;
-    background: rgb(226,200,69);
-    background: linear-gradient(90deg, rgba(226,200,69,1) 46%, rgba(255,255,198,1) 78%, rgba(240,235,49,1) 100%);
-
-}
-#podium1 { /* silver */
-    height: 200px;
-    background: rgb(136,126,115);
-    background: linear-gradient(90deg, rgba(136,126,115,1) 46%, rgba(224,212,192,1) 83%, rgba(148,139,129,1) 100%);
-}
-#podium2 { /* bronze */
-    height: 150px;
-    background: rgb(226,153,69);
-    background: linear-gradient(90deg, rgba(226,153,69,1) 46%, rgba(255,234,198,1) 83%, rgba(240,148,49,1) 100%);
-
+h1{
+    color:aliceblue;
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
 }
